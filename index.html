@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+      
+
+    <div class="contenedor-header">
+        
+          
+        <header>
+            <div class="logo">
+                <a href="">Jose luis</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">START</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">ABOUT ME </a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Foto.jpg" alt="">
+            </div>
+            <h1 data-translate="headerTitle">JOSE LUIS LEON</h1>
+            <h2 data-translate="headerSubtitle">Software engineer</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.skype.com/es/"><i class="fa-brands fa-skype"></i></a>
+                <a href="https://www.linkedin.com/in/jose-luis-leon-luna/"><i class="fa-brands fa-linkedin-in"></i></a>
+               
+                <button id="toggle-btn" data-translate="chatBot">Chat Bot</button>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 data-translate="aboutMe">PRESENTATION</h2>
+            <p ><span >Hello, I'm Jose Luis Leon..</span> I am a software engineer with 5 years of experience in software development. During this time, I have worked on team-based application development projects as well as personal projects that I have developed on my own. All of this has allowed me to acquire skills in problem-solving, analysis and design of solutions, and software version management.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Personal Information</h3>
+                    <ul>
+
+                        <li>
+                            <strong>Phone</strong>
+                            (+1) 8507169473
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            joseluisleonluna@gmail.com
+                        </li>
+
+                        <li>
+                            <strong>Address</strong>
+                            1000 airport rd unit 109
+                        </li>
+                        <li>
+                            <strong>Position</strong>
+                            <span>Developer</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Interests</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>GAMES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSIC</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>TRAVEL</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>SPORTS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>BOOKS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>CARS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>PHOTOS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <button>
+                Download CV <a download="cv" href="docs/Copia de c.v.pdf">HERE</a>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3> Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>M - A</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>M - A</span>
+                                <progress max="100" [value]="person.age"></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Angular</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>M - A</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Git</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>M - A</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>M - A</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Communication</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                                <progress max="75" [value]=" "></progress>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Teamwork</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>"Creativity"</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedication</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                                <progress max="75" [value]=" "></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>"Education"</h3>
+                    <div class="item izq">
+                        <h4>"Software Engineering" </h4>
+                        <span class="casa">Politechico grancolombiano</span>
+                        <span class="fecha">2017 - 2023</span>
+                        <p>"My career as a Software Engineer has provided me with the opportunity to participate in exciting and challenging projects, which has helped me develop skills in teamwork and problem-solving. I am excited to continue advancing in my career and apply my skills and knowledge in the real world to develop innovative and useful solutions for society."."</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col derecha">
+                    <h3>Work Experience</h3>
+                    <div class="item der">
+                        <h4>Junior Developer </h4>
+                        <span class="casa">Omega web</span>
+                        <span class="fecha">2019 - 2022</span>
+                        <p>Web page layout using CSS and preprocessors such as Sass, Less, and Stylus.
+                            Creation of components with CSS.
+                            Building Single Page Applications (SPAs) with Angular and React.
+                            Management of Git repositories.
+                            Development of web applications using the Bootstrap framework..</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Developer frontend</h4>
+                        <span class="casa">M.VIP</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>Using development techniques in web applications utilizing various programming languages.
+                            Updating web applications as defined by the project leader.
+                            Data gathering and analysis using different frameworks.
+                            Detection and resolution of issues.
+                            SQL database updates.
+                            </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/js.png" alt="">
+                    <div class="overlay">
+                        <h3>>Creative designer</h3>
+                        <p>JAVASCRIPT</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Angular.jpeg" alt="">
+                    <div class="overlay">
+                        <h3>>Creative designer</h3>
+                        <p>ANGULAR</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/react.png" alt="">
+                    <div class="overlay">
+                        <h3>>Creative designer</h3>
+                        <p>REACT</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/git.jpg" alt="">
+                    <div class="overlay">
+                        <h3>>Creative designer</h3>
+                        <p>GIT</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/bootstrap.jpg" alt="">
+                    <div class="overlay">
+                        <h3>>Creative designer</h3>
+                        <p>BOOTSTRAP</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/prepro.jpeg" alt="">
+                    <div class="overlay">
+                        <h3>Creative designer</h3>
+                        <p>PREPROCESSORS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACT</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form id="formulario" onsubmit="enviarMensaje(event)">
+
+                      <input type="text" placeholder="Your name" name="name">
+                      <input type="text" placeholder="Telephone number" name="Phone">
+                      <input type="text" placeholder="Email address" name="Email">
+                      <input type="text" placeholder="Theme" name="Theme">
+                      <textarea name="Message" cols="30" rows="10" placeholder="Message"></textarea>
+                      <button type="submit" onclick="Sendamessage()">Send message<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                    </form>
+                  </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/Florida_Political_Map_Kwh.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                EE.UU, Destin Florida 32541
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Phone: (1) 8507167493
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: joseluisleonluna@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        
+
+            
+            <div id="chat-container">
+                <div id="chat-header">Chat Bot</div>
+                <div id="chat-toggle">
+                 
+                </div>
+                <div id="chat-history"></div>
+                <div id="chat-input">
+                  <input type="text" id="input-text">
+                  <button  id="send-btn">Send</button>
+                </div>
+              </div>
+              
+           
+
+              
+
+
+
+
+        </div>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
